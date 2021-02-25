@@ -8,6 +8,7 @@ stream = p.open(format=pyaudio.paFloat32, channels=1, rate=44100,frames_per_buff
 # 適当なサイン波を生成する --- (*2)
 samples = np.sin(np.arange(50000) / 20)
 
+
 # サイン波を再生する --- (*3)
 print("play")
 stream.write(samples.astype(np.float32).tostring())
