@@ -33,3 +33,8 @@ print(res)
 cnt = res["p"] + res["n"] + res["e"]
 print("ポジティブ度", res["p"] / cnt)
 print("ネガティブ度", res["n"] / cnt)
+
+# グラフを描画
+import pandas as pd
+df = pd.DataFrame({'nega_posi':[res['p'], res['n'], res['e']]}, index=['Positive','Negative','e'])
+df.plot.pie(y='nega_posi', figsize=(6,6))
