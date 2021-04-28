@@ -1,4 +1,5 @@
 # ブロック崩し
+import tkinter as Tk
 from tkinter import *
 import random
 
